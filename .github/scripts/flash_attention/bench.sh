@@ -16,7 +16,7 @@ fa)
 mha)
     cd /aiter || exit 2
     python op_tests/op_benchmarks/triton/bench_mha.py \
-        -impl dao_ai -metric throughput -o "${2:-/tmp/bench_dao_ai}"
+        -impl dao_ai --metric throughput -o "${2:-/tmp/bench_dao_ai}"
     ;;
 *)
     echo "usage: $0 <fa | mha> [out-dir]" >&2
